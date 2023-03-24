@@ -51,9 +51,9 @@ let answer =await Doctor.findAll({
             }
           })
           .then((newDoctor) => {
+              console.log(newDoctor);
             res.json(newDoctor);
 
-            console.log(newDoctor);
           })
           .catch((error) => {
             console.log(error);

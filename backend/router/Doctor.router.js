@@ -44,7 +44,7 @@ DoctorRouter.post('/getdocotorwithpassword', async (req, res) => {
     let {email,password}=req.body.data;
     console.log(req.params.id)
    
-       newDoctor=await Doctor.findAll({
+let answer =await Doctor.findAll({
             where: {
                 email:email,
                 password:password

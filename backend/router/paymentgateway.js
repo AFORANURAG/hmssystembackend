@@ -28,8 +28,8 @@ paymentRouter.post("/",async (req,res)=>{
               bookingDate: Datetime
             },
             mode: 'payment',
-            success_url: 'https://hospitalmanagmentsystem.vercel.app/',
-            cancel_url: 'https://hospitalmanagmentsystem.vercel.app/',
+            success_url: 'https://hospitalmanagmentsystem-hhg3qqyjt-aforanurag.vercel.app/',
+            cancel_url: 'https://hospitalmanagmentsystem-hhg3qqyjt-aforanurag.vercel.app/',
             billing_address_collection:"required"
           });
          res.send({link:session.url})

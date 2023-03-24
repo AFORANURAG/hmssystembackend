@@ -28,9 +28,9 @@ paymentRouter.post("/",async (req,res)=>{
               bookingDate: Datetime
             },
             mode: 'payment',
-            
-            success_url: 'https://hmsfrontend-b1nup0m0y-aforanurag.vercel.app/',
-            cancel_url: 'https://hmsfrontend-b1nup0m0y-aforanurag.vercel.app/',
+
+            success_url: 'https://hmsfrontend-eight.vercel.app/',
+            cancel_url: 'https://hmsfrontend-eight.vercel.app/',
             billing_address_collection:"required"
           });
          res.send({link:session.url})

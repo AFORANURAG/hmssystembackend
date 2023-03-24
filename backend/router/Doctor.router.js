@@ -43,7 +43,7 @@ DoctorRouter.get('/Department/:id', async (req, res) => {
 DoctorRouter.post('/getdocotorwithpassword', async (req, res) => {
     let {email,password}=req.body.data;
     console.log(req.params.id)
-    try {
+   
        newDoctor=await Doctor.findAll({
             where: {
                 email:email,
@@ -57,12 +57,10 @@ DoctorRouter.post('/getdocotorwithpassword', async (req, res) => {
           })
           .catch((error) => {
             console.log(error);
+            res.status(500).json({ message: 'Server error' });
           });
           
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ message: 'Server error' });
-    }
+
 });
 
 

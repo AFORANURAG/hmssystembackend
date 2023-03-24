@@ -42,9 +42,10 @@ DoctorRouter.get('/Department/:id', async (req, res) => {
 // info of that doctor
 DoctorRouter.post('/getdocotorwithpassword', async (req, res) => {
     let {email,password}=req.body.data;
+    console.log(email,password)
     console.log(req.params.id)
    
-let answer =await Doctor.findAll({
+Doctor.findAll({
             where: {
                 email:email,
                 password:password

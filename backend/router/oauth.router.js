@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require('express');
 
 // const bcrypt=require("")
@@ -18,12 +19,11 @@ const TOKEN_ENDPOINT = 'https://oauth2.googleapis.com/token';
 
 const { OAuth2Client } = require('google-auth-library');
 
-const oAuth2Client = new OAuth2Client("172721478034-tesnpt2cg096svdifscbo9vm953vac1s.apps.googleusercontent.com", "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", REDIRECT_URI);
 
 OauthRouter.get('/auth/google', (req, res) => {
   const params = {
     response_type: 'code',
-    client_id: "50186676496-pnqtl7e865c3tk26e6951sq969hbfiv3.apps.googleusercontent.com",
+    client_id: process.env.client_id,
     redirect_uri: REDIRECT_URI,
     scope:'https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile',
   };
@@ -37,8 +37,8 @@ OauthRouter.get('/auth/google/callback', async (req, res) => {
 console.log(code)
   const params = {
     code,
-    client_id: "50186676496-pnqtl7e865c3tk26e6951sq969hbfiv3.apps.googleusercontent.com",
-    client_secret: "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",
+    client_id:  process.env.client_id,
+    client_secret: process.env.client_secret,
     redirect_uri:REDIRECT_URI,
     grant_type: 'authorization_code',
   };

@@ -11,7 +11,7 @@ const {OauthSignup}=require("../model/Oauthuser.model.js")
 
 const OauthRouter = express.Router();
 
-const REDIRECT_URI = 'http://localhost:8000/oauth/auth/google/callback';
+const REDIRECT_URI = 'https://hospitalmanagementsystembackend-gnz7.onrender.com/oauth/auth/google/callback';
 
 const AUTH_ENDPOINT = 'https://accounts.google.com/o/oauth2/v2/auth';
 

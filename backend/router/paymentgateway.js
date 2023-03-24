@@ -28,8 +28,8 @@ paymentRouter.post("/",async (req,res)=>{
               bookingDate: Datetime
             },
             mode: 'payment',
-            success_url: 'https://frontendofhms-v29b.vercel.app/',
-            cancel_url: 'http://localhost:3000',
+            success_url: 'https://hospitalmanagmentsystem.vercel.app/',
+            cancel_url: 'https://hospitalmanagmentsystem.vercel.app/',
             billing_address_collection:"required"
           });
          res.send({link:session.url})

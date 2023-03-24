@@ -28,15 +28,14 @@ paymentRouter.post("/",async (req,res)=>{
               bookingDate: Datetime
             },
             mode: 'payment',
-            success_url: 'https://hospitalmanagmentsystem-hhg3qqyjt-aforanurag.vercel.app/',
-            cancel_url: 'https://hospitalmanagmentsystem-hhg3qqyjt-aforanurag.vercel.app/',
+            
+            success_url: 'https://hmsfrontend-b1nup0m0y-aforanurag.vercel.app/',
+            cancel_url: 'https://hmsfrontend-b1nup0m0y-aforanurag.vercel.app/',
             billing_address_collection:"required"
           });
          res.send({link:session.url})
     } catch (error) {
         res.json({message:"payment gateway crashed",error:error.message})
     }
-
-    
 })
 module.exports ={paymentRouter}

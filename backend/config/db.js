@@ -5,7 +5,7 @@ const pass=process.env.Pass
 // console.log(pass)
 // new Sequelize()
 const sequelize = new Sequelize(process.env.dbname,process.env.dbname ,process.env.password, {
-host: 'sql12.freemysqlhosting.net',
+host: 'sql12.freesqldatabase.com',
     dialect: 'mysql'
 })
 
